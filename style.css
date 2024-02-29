@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 150px;
+}
+
+.mario {
+    height: 400px;
+}
+
+p { 
+    color:white;
+    font-size: 18px;
+}
+
+button  {
+    color: white; /*cor da letra*/
+    background-color: #c51111; /* cor de fundo*/
+    border-radius: 5px; /*borda superior*/
+    border: none; /* sem borda*/
+    width: 200px;
+    height: 40px;
+    cursor: pointer; /* pra aparcer a maozinha quando passa o mouse*/
+    text-transform: uppercase; /*pra ficar tudo maiusculo*/
+    font-weight: bold; /* bold é negrito*/
+    margin-top: 20px;
+}
+
+body {
+   
+    height: 100vh; /* para ocupar a tela toda, a tela toda independente do tamanho da tela*/
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;/* alinhamento dos itens eixo vertical*/
+    padding: 70px ;/* espaçamento interno*/
+    justify-content: space-around; /* alinha no eixo horizontal*/
+    height: 100vh;
+}
+.caixa-principal{
+    width: 30%;  
+}
+
+.caixa-video {
+   
+    position: fixed; /* posição fixa*/
+    top: 0; /* posicionado ao topo*/
+    z-index: -1;  /* pra ficar atras*/  
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+.mascara {
+    height: 100%;
+    width: 100%;  
+    background: linear-gradient(90deg, rgba(0,4,36,0.8715861344537815) 0%, rgba(189,192,203,0.7287289915966386) 100%);
+    position: fixed;
+    top: 0;
+}
+.Link-whatsapp img {
+    height: 60px; /*altura*/
+    position: fixed; /* posicao*/
+    right: 20px; /* direita*/
+    bottom: 20px; /* inferior*/
+
+}
+.header {
+    display: flex;
+    align-items: center;
+    height: 30px; /*altura*/
+    gap: 30px; /* espaçamento entre eles nusado no display flex*/
+    margin: 20px; /* só margin aplica todas as direções*/
+}
+.header img {
+    height: 60px; /* tipo a logo de algo, empresa etc..*/
+
+}
+.header a {
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer; /* colocar a maozinha*/
+    color: white; /* cor da letra*/
+
+}
+.header a:hover {/* eventos de passar o mouse, dizer o que é pra fazer quando passa o mouse em cima*/
+    color: #c51111; /* muda a cor quando passar o mouse*/
+    font-size: 26px;/* muda o tamanho quando passar o mouse*/
+    transition: 0.5s ease-in-out; /* transição entrada e na saida*/
+}
+
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    left: -300%;
+    /*transform: translate(-310%);/* baseado na posição, move eixo x e y*/
+    top: 30%; /* em posicaoo ao topo da tela*/
+    padding: 20px; /* espaço interno*/
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+}
+
+    input { /* dentro do formulario*/
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px; /* dewsgruda o texto-*/
+    outline-color: #18d80f; /* cor da borda*/
+} 
+
+textarea{
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+
+}
+
+.mascara-formulario{
+    visibility: hidden; /*visibilidade escondido*/
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg,rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 58%);
+    transition:  visibility 1s ease-in-out;
+}
+
+/*inicial formulario-fale-conosco
+
+left: -300px;
+
+final mascara formulario
+
+left: 50%;
+transform: translateX(-50%); /*horizontal*/
+/*
+/* abaixo de 1100px sempre em baixo de tudo, pq css é efeito em cascata*/
+
+@media (max-width: 900px) {
+    p {
+        display: none;
+    
+    }
+    .caixa-mae { 
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    .caixa-principal{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mario{
+        width:80vw ; /* dividir a tela em 100 pedacinho, nesse caso diminui */
+        height: auto;
+    }
+    .header {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header img {
+        display: none;  
+    
+    }
+    .header a {
+        font-size: 18px;
+    }
+}
+
+
+
+
+

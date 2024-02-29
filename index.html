@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mario Bros</title>
+  </head>
+
+  <body>
+    <div class="mascara-formulario" onclick="esconderForm()"></div>
+
+    <div class="header">
+      <img src="img/icon.png" alt="header" class="header" />
+      <a>Home</a>
+      <a href="nossos-servicos.html">Nosso Serviços</a>
+      <a>Fale Conosco</a>
+    </div>
+
+    <div class="caixa-mae">
+      <div class="caixa-principal">
+        <img src="./img/logo.png" alt="logo" class="logo" />
+
+        <p>Encanadores Mario e Luigi, resolvendo seu problema com estilo!</p>
+        <p>já se encontrou com uma situação de emergência com encanamento?</p>
+        <p>
+          Vazamentos inesperados, canos entupidos ou torneiras que não param de
+          pingar?
+        </p>
+        <p>
+          Não se preocupe, porque estamos aqui pra salvar o dia! Apresentamos a
+          você os encanadores mais famosos do reino dos cogumelos - Mario e
+          Luigi!
+        </p>
+
+        <button onclick="mostrarForm()">Entre em contato</button>
+      </div>
+
+      <div>
+        <img src="./img/mario.png" alt="mario" class="mario" />
+      </div>
+    </div>
+
+    <div class="caixa-video">
+      <video src="./img/video.mp4" autoplay muted loop></video>
+      <!--autoplay começa automatico
+             e muted é pra começa mudo e loop é pra começar automaticamente de novo-->
+      <div class="mascara"></div>
+      <!--pra ficar ao fundo-->
+    </div>
+
+    <a
+      href="https://api.whatsapp.com/send?phone=5546999290989&text=Quer%20Ajuda%20dos%20irm%C3%A3os??"
+      class="Link-whatsapp"
+    >
+      <!--link para levar até o whatsapp-->
+
+      <img src="./img/whatsapp.png" alt="Link para Whatsapp" />
+      <!--img da logo do whatsapp-->
+    </a>
+
+    <form
+      class="formulario-fale-conosco"
+      action="https://formcarry.com/s/i44aOm4CrQl"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <!--estes campos forma copiados do site formcarry fazem o formulario funcionar e retornar o e-mail do cliente-->
+      <input placeholder="Seu nome" type="text" name="Nome" />
+      <input placeholder="Seu telefone" type="tel" name="Telefone" />
+      <textarea
+        placeholder="Digite seu problema aqui..."
+        name="duvidas"
+      ></textarea>
+      <!--text area um tipo de input com mais espaço para varias informações-->
+      <button type="submit">Pedir Orçamento</button>
+      <!--submit envia o endereço-->
+    </form>
+  </body>
+
+  <script src="scripts.js"></script>
+</html>
